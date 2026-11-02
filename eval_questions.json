@@ -1,0 +1,142 @@
+[
+  {
+    "id": "1",
+    "question": "Who coined the term \"artificial intelligence\" and when?",
+    "reference": "John McCarthy coined it for the Dartmouth workshop in the summer of 1956.",
+    "context_keywords": ["McCarthy"],
+    "answer_keywords": ["McCarthy", "1956"]
+  },
+  {
+    "id": "2",
+    "question": "What happened in 1997 in AI history?",
+    "reference": "IBM's Deep Blue defeated world chess champion Garry Kasparov.",
+    "context_keywords": ["Deep Blue"],
+    "answer_keywords": ["Deep Blue", "Kasparov"]
+  },
+  {
+    "id": "3",
+    "question": "What are the three main types of machine learning?",
+    "reference": "Supervised learning, unsupervised learning, and reinforcement learning.",
+    "context_keywords": ["three main types"],
+    "answer_keywords": ["supervised", "unsupervised", "reinforcement"]
+  },
+  {
+    "id": "4",
+    "question": "What is the typical train/validation/test split mentioned?",
+    "reference": "70 percent training, 15 percent validation, 15 percent testing.",
+    "context_keywords": ["70 percent"],
+    "answer_keywords": ["70", "15"]
+  },
+  {
+    "id": "5",
+    "question": "Which paper introduced the Transformer architecture, and when?",
+    "reference": "\"Attention Is All You Need\", published by Google researchers in 2017.",
+    "context_keywords": ["Attention Is All You Need"],
+    "answer_keywords": ["Attention Is All You Need", "2017"]
+  },
+  {
+    "id": "6",
+    "question": "What was the result of AlphaGo against Lee Sedol?",
+    "reference": "AlphaGo won four games to one in 2016.",
+    "context_keywords": ["Lee Sedol"],
+    "answer_keywords": []
+  },
+  {
+    "id": "7",
+    "question": "What is overfitting and how can it be reduced?",
+    "reference": "The model learns the training data too closely, including noise, and performs poorly on new data. It can be reduced with more data, regularization, dropout, a simpler model, or early stopping.",
+    "context_keywords": ["Overfitting happens"],
+    "answer_keywords": []
+  },
+  {
+    "id": "8",
+    "question": "How are precision and recall calculated?",
+    "reference": "Precision = true positives / (true positives + false positives). Recall = true positives / (true positives + false negatives).",
+    "context_keywords": ["Precision is the fraction"],
+    "answer_keywords": []
+  },
+  {
+    "id": "9",
+    "question": "Why can accuracy be misleading?",
+    "reference": "With imbalanced classes, for example 1 percent fraud, a model that always predicts not fraud gets 99 percent accuracy but is useless.",
+    "context_keywords": ["99 percent"],
+    "answer_keywords": []
+  },
+  {
+    "id": "10",
+    "question": "What is RAG and why is it used?",
+    "reference": "Retrieval-Augmented Generation retrieves relevant passages from an external source and gives them to the LLM, which reduces hallucination.",
+    "context_keywords": ["Retrieval-Augmented Generation"],
+    "answer_keywords": ["hallucination"]
+  },
+  {
+    "id": "11",
+    "question": "What does the temperature setting do?",
+    "reference": "It controls randomness. A temperature of 0 is nearly deterministic, and higher values give more varied, creative output.",
+    "context_keywords": ["temperature setting"],
+    "answer_keywords": []
+  },
+  {
+    "id": "12",
+    "question": "Why do scanned PDFs often fail in RAG systems?",
+    "reference": "Scanned PDFs are images of text, so OCR is needed to convert them into machine-readable text first.",
+    "context_keywords": ["scanned PDFs"],
+    "answer_keywords": ["OCR"]
+  },
+  {
+    "id": "13",
+    "question": "Compare supervised and unsupervised learning.",
+    "reference": "Supervised learning uses labeled data for tasks like classification and regression. Unsupervised learning uses unlabeled data to find structure, for example clustering and dimensionality reduction.",
+    "context_keywords": ["Unsupervised learning uses unlabeled"],
+    "answer_keywords": ["labeled"]
+  },
+  {
+    "id": "14",
+    "question": "What are the steps in a RAG pipeline?",
+    "reference": "Indexing: load documents, split into chunks, embed, store in a vector database. Query: embed the question, retrieve similar chunks, add them to the prompt, and let the LLM answer.",
+    "context_keywords": ["indexing phase"],
+    "answer_keywords": ["embed"]
+  },
+  {
+    "id": "15a",
+    "question": "What is a convolutional neural network?",
+    "reference": "A network designed for grid-like data such as images, using sliding filters to detect edges, textures, and shapes.",
+    "context_keywords": ["grid-like"],
+    "answer_keywords": ["image"]
+  },
+  {
+    "id": "15b",
+    "question": "What is it mainly used for?",
+    "follow_up": true,
+    "reference": "It is mainly used for images (computer vision). The word 'it' refers to the convolutional neural network.",
+    "context_keywords": ["grid-like"],
+    "answer_keywords": ["image"]
+  },
+  {
+    "id": "16a",
+    "question": "What is an LSTM?",
+    "reference": "A type of recurrent neural network (Long Short-Term Memory) that handles long-range dependencies better.",
+    "context_keywords": ["Long Short-Term Memory"],
+    "answer_keywords": []
+  },
+  {
+    "id": "16b",
+    "question": "Who invented it and when?",
+    "follow_up": true,
+    "reference": "Sepp Hochreiter and Juergen Schmidhuber invented the LSTM in 1997.",
+    "context_keywords": ["Hochreiter"],
+    "answer_keywords": ["Hochreiter", "1997"]
+  },
+  {
+    "id": "17",
+    "question": "Who won the 2018 FIFA World Cup?",
+    "should_refuse": true,
+    "reference": "Not in the documents. The bot should refuse."
+  },
+  {
+    "id": "18",
+    "question": "What is the capital of Australia?",
+    "should_refuse": true,
+    "reference": "Not in the documents. The bot should refuse."
+  }
+]

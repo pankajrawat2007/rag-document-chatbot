@@ -1,0 +1,30 @@
+# --- Secrets (NEVER commit) ---
+.env
+*.key
+
+# --- Python environment and caches ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# --- IDE files ---
+.idea/
+.vscode/
+
+# --- Local vector databases (rebuilt by indexing) ---
+chroma_db/
+chroma_db_*/
+
+# --- Your documents: ignored by default so private files are never uploaded ---
+data/*
+!data/.gitkeep
+!data/ai_knowledge_base.txt
+
+# --- Evaluation: keep the history table, ignore bulky per-run files ---
+eval_results/run_*.json
+
+# --- OS files ---
+.DS_Store
+Thumbs.db

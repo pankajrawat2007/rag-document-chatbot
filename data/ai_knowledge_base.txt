@@ -1,0 +1,146 @@
+INTRODUCTION TO ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING
+A General Reference Guide
+
+==============================================================
+CHAPTER 1: WHAT IS ARTIFICIAL INTELLIGENCE?
+==============================================================
+
+Artificial intelligence (AI) is the field of computer science concerned with building systems that can perform tasks which normally require human intelligence. These tasks include understanding language, recognizing images, making decisions, solving problems, and learning from experience.
+
+AI is often divided into two broad categories. Narrow AI, also called weak AI, is designed to perform one specific task, such as recommending movies, translating text, or detecting spam. Almost all AI systems in use today are narrow AI. General AI, also called strong AI or artificial general intelligence (AGI), refers to a hypothetical system that could understand, learn, and apply knowledge across any intellectual task at a human level. General AI does not exist today.
+
+AI is an umbrella term. Machine learning is a subset of AI in which systems learn patterns from data instead of following hand-written rules. Deep learning is a subset of machine learning that uses neural networks with many layers. The relationship can be pictured as nested circles: AI contains machine learning, and machine learning contains deep learning.
+
+==============================================================
+CHAPTER 2: A BRIEF HISTORY OF AI
+==============================================================
+
+In 1950, Alan Turing published the paper "Computing Machinery and Intelligence". In it he proposed the imitation game, now known as the Turing Test, as a way to judge whether a machine can exhibit intelligent behavior indistinguishable from a human.
+
+The term "artificial intelligence" was coined by John McCarthy for the Dartmouth workshop held in the summer of 1956. This workshop is widely regarded as the birth of AI as an academic field. Other organizers and attendees included Marvin Minsky, Nathaniel Rochester, and Claude Shannon.
+
+AI went through periods of high optimism followed by disappointment. These downturns are known as AI winters. The first AI winter occurred in the mid 1970s, when early promises failed to materialize and funding was cut. A second AI winter followed in the late 1980s and early 1990s after the collapse of the market for expert systems.
+
+In 1997, IBM's Deep Blue defeated the world chess champion Garry Kasparov in a six-game match. In 2011, IBM's Watson won the quiz show Jeopardy! against two former champions. In 2016, DeepMind's AlphaGo defeated the Go champion Lee Sedol by four games to one, a milestone because Go has far more possible positions than chess.
+
+In 2012, a deep convolutional neural network called AlexNet won the ImageNet image classification competition by a large margin. This result is commonly credited with starting the modern deep learning boom. In 2017, researchers at Google published the paper "Attention Is All You Need", which introduced the Transformer architecture. Transformers are the foundation of today's large language models.
+
+==============================================================
+CHAPTER 3: MACHINE LEARNING FUNDAMENTALS
+==============================================================
+
+Machine learning (ML) algorithms build a mathematical model from training data so that they can make predictions or decisions on new, unseen data. There are three main types of machine learning.
+
+Supervised learning uses labeled data, meaning every training example comes with the correct answer. The model learns to map inputs to outputs. Common supervised tasks are classification, where the output is a category such as spam or not spam, and regression, where the output is a number such as a house price. Examples of supervised algorithms include linear regression, logistic regression, decision trees, random forests, and support vector machines.
+
+Unsupervised learning uses unlabeled data. The model must find structure on its own. Typical tasks include clustering, which groups similar items together, and dimensionality reduction, which compresses data into fewer features. K-means is a popular clustering algorithm, and Principal Component Analysis (PCA) is a common dimensionality reduction technique.
+
+Reinforcement learning trains an agent to make a sequence of decisions by interacting with an environment. The agent receives rewards for good actions and penalties for bad ones, and it learns a policy that maximizes total reward over time. Reinforcement learning is used in game playing, robotics, and resource management.
+
+A typical machine learning workflow has these steps: collect data, clean and prepare the data, split the data, choose a model, train the model, evaluate it, tune it, and deploy it. A common way to split data is 70 percent for training, 15 percent for validation, and 15 percent for testing. The training set is used to fit the model, the validation set is used to tune settings, and the test set is used only once at the end to estimate real-world performance.
+
+Two common problems are overfitting and underfitting. Overfitting happens when a model learns the training data too closely, including its noise, and performs poorly on new data. Underfitting happens when a model is too simple to capture the pattern in the data and performs poorly even on the training set. Overfitting can be reduced by collecting more data, using regularization, applying dropout in neural networks, simplifying the model, or using early stopping.
+
+Feature engineering is the process of selecting and transforming raw data into inputs that help a model learn. Good features often matter more than the choice of algorithm.
+
+==============================================================
+CHAPTER 4: EVALUATING MODELS
+==============================================================
+
+Choosing the right metric depends on the problem. For classification, accuracy is the share of predictions that are correct. However, accuracy can be misleading when classes are imbalanced. If only 1 percent of emails are fraud, a model that always predicts "not fraud" is 99 percent accurate but useless.
+
+Precision is the fraction of positive predictions that are actually correct. It equals true positives divided by the sum of true positives and false positives. Recall, also called sensitivity, is the fraction of actual positives that the model finds. It equals true positives divided by the sum of true positives and false negatives. The F1 score is the harmonic mean of precision and recall, and it is useful when you need a single number that balances both.
+
+A confusion matrix is a table that shows true positives, false positives, true negatives, and false negatives. For regression problems, common metrics include mean absolute error (MAE), mean squared error (MSE), root mean squared error (RMSE), and R-squared.
+
+Cross-validation is a technique for getting a more reliable performance estimate. In k-fold cross-validation, the data is divided into k parts. The model is trained k times, each time using a different part as the validation set and the remaining parts for training. The k results are then averaged. A common choice is k equal to 5 or 10.
+
+==============================================================
+CHAPTER 5: NEURAL NETWORKS AND DEEP LEARNING
+==============================================================
+
+An artificial neural network is made of layers of connected units called neurons. Each neuron receives inputs, multiplies them by weights, adds a bias, and passes the result through an activation function. A network has an input layer, one or more hidden layers, and an output layer. A network with many hidden layers is called a deep neural network.
+
+Activation functions add non-linearity so the network can learn complex patterns. Popular ones are ReLU (Rectified Linear Unit), sigmoid, tanh, and softmax. ReLU outputs zero for negative inputs and the input itself for positive inputs. Softmax converts a set of numbers into probabilities that add up to one, and it is commonly used in the output layer for multi-class classification.
+
+Training a neural network involves two main ideas. Backpropagation computes how much each weight contributed to the error. Gradient descent then updates the weights in the direction that reduces the error. The learning rate controls the size of each update. If the learning rate is too high, training can become unstable. If it is too low, training is very slow. Adam is a widely used optimizer that adapts the learning rate during training.
+
+Convolutional neural networks (CNNs) are designed for grid-like data such as images. They use filters that slide across the image to detect edges, textures, and shapes. Recurrent neural networks (RNNs) process sequences such as text or time series by passing information from one step to the next. Long Short-Term Memory (LSTM) networks, invented by Sepp Hochreiter and Juergen Schmidhuber in 1997, are a type of RNN that handles long-range dependencies better.
+
+Transformers replaced most recurrent models for language tasks. Their key mechanism is self-attention, which lets every word in a sentence look at every other word to decide which are most relevant. Because transformers process all positions in parallel, they train much faster on modern hardware such as GPUs than RNNs do.
+
+==============================================================
+CHAPTER 6: NATURAL LANGUAGE PROCESSING AND LARGE LANGUAGE MODELS
+==============================================================
+
+Natural language processing (NLP) is the area of AI that deals with human language. Tasks include translation, sentiment analysis, summarization, question answering, and named entity recognition.
+
+Before text can be used by a model, it is broken into tokens. A token may be a word, part of a word, or a single character. Each token is converted into an embedding, which is a list of numbers (a vector) that captures meaning. Words with similar meanings have embeddings that are close to each other in vector space.
+
+A large language model (LLM) is a transformer-based neural network trained on enormous amounts of text to predict the next token. Through this simple objective, LLMs learn grammar, facts, and reasoning patterns. Well-known examples include GPT models, Claude, Gemini, and Llama. LLMs are first pre-trained on large general datasets and are often fine-tuned afterwards on smaller, specialized datasets or aligned with human feedback to make them more helpful and safe.
+
+The context window is the maximum amount of text, measured in tokens, that a model can consider at one time. The temperature setting controls randomness. A temperature of 0 makes the output nearly deterministic and consistent, while higher values make it more varied and creative.
+
+A well-known weakness of LLMs is hallucination, which happens when a model produces fluent but false or unsupported statements. Hallucination occurs because the model generates likely text rather than verifying facts.
+
+==============================================================
+CHAPTER 7: RETRIEVAL-AUGMENTED GENERATION (RAG)
+==============================================================
+
+Retrieval-Augmented Generation, or RAG, is a technique that reduces hallucination by giving an LLM relevant information from an external knowledge source at the time of the question. Instead of relying only on what the model memorized during training, the system first retrieves relevant passages and then asks the model to answer using them.
+
+A typical RAG pipeline has two phases. In the indexing phase, documents are loaded and split into smaller chunks. Each chunk is converted into an embedding, and the embeddings are stored in a vector database such as Chroma, FAISS, Pinecone, or Qdrant. In the query phase, the user's question is embedded, the vector database returns the most similar chunks, and these chunks are placed into the prompt together with the question. The LLM then generates an answer grounded in that context.
+
+Chunk size is an important setting. Very small chunks may lose context, while very large chunks may contain too many unrelated ideas and dilute the embedding. A chunk overlap, typically 10 to 20 percent of the chunk size, helps keep ideas from being cut in half at chunk boundaries.
+
+The number of chunks retrieved is called k. Retrieving too few chunks may miss the answer, and retrieving too many can add noise and cost. Maximal Marginal Relevance (MMR) is a retrieval method that balances relevance with diversity so that the returned chunks are not near-duplicates of each other.
+
+Several techniques can improve RAG quality. Hybrid search combines keyword search (such as BM25) with vector search so that exact terms and semantic meaning are both covered. A reranker is a second model that rescoring retrieved chunks so that the best ones come first. For multi-turn chat, a history-aware retriever rewrites a follow-up question such as "Give me an example of it" into a standalone question before searching.
+
+RAG systems are evaluated on two main qualities: retrieval quality, meaning whether the right chunks were found, and answer faithfulness, meaning whether the answer is supported by those chunks.
+
+==============================================================
+CHAPTER 8: COMPUTER VISION AND OTHER APPLICATIONS
+==============================================================
+
+Computer vision enables machines to interpret images and video. Core tasks include image classification, object detection, image segmentation, and optical character recognition (OCR). OCR converts images of text, such as scanned documents, into machine-readable text. This is why scanned PDFs often need OCR before they can be searched or used in a RAG system.
+
+AI is applied in many industries. In healthcare, it helps analyze medical images and predict patient risk. In finance, it supports fraud detection and credit scoring. In retail, it powers recommendation engines and demand forecasting. In transportation, it enables driver assistance and route optimization. In agriculture, it is used for crop monitoring and yield prediction. In customer service, chatbots and virtual assistants handle routine questions around the clock.
+
+Recommendation systems suggest products or content using collaborative filtering, which relies on the behavior of similar users, or content-based filtering, which relies on the properties of the items themselves.
+
+==============================================================
+CHAPTER 9: ETHICS, RISKS, AND RESPONSIBLE AI
+==============================================================
+
+AI systems can cause harm if they are built or used carelessly. Bias is a major concern. If training data reflects historical discrimination, the model can reproduce or amplify it. For example, a hiring model trained on past decisions that favored one group may unfairly rank candidates from other groups lower.
+
+Privacy is another concern, since AI systems often need large amounts of personal data. Regulations such as the European Union's General Data Protection Regulation (GDPR) set rules for how personal data may be collected and used. The EU AI Act classifies AI systems by risk level, with stricter requirements for high-risk applications.
+
+Explainability refers to the ability to understand why a model produced a particular output. Simple models like decision trees are easy to interpret, while deep neural networks are often called black boxes. Transparency, accountability, fairness, safety, and human oversight are widely accepted principles of responsible AI.
+
+Other risks include misinformation generated at scale, security vulnerabilities such as prompt injection, over-reliance on automated decisions, and the environmental cost of training very large models, which can consume significant amounts of electricity.
+
+==============================================================
+CHAPTER 10: GLOSSARY
+==============================================================
+
+Algorithm: A set of step-by-step instructions for solving a problem.
+
+Epoch: One complete pass through the entire training dataset during training.
+
+Batch size: The number of training examples processed before the model updates its weights.
+
+Hyperparameter: A setting chosen before training, such as the learning rate or number of layers, as opposed to parameters like weights that are learned from data.
+
+Inference: The process of using a trained model to make predictions on new data.
+
+Fine-tuning: Continuing the training of a pre-trained model on a smaller, task-specific dataset.
+
+Vector database: A database designed to store embeddings and quickly find the ones most similar to a query.
+
+Prompt: The input text given to a language model, including instructions, context, and the user's question.
+
+Token: The basic unit of text that a language model reads and produces.
+
+GPU: Graphics Processing Unit, a chip that performs many calculations in parallel and is widely used to train neural networks.
